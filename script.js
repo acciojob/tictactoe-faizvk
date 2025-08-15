@@ -1,5 +1,5 @@
 //your JS code here. If required.
-let currentPlayer = "X";
+let currentPlayer = "x";
 let player1 = "";
 let player2 = "";
 let gameActive = true;
@@ -10,8 +10,8 @@ const messageDiv = document.querySelector(".message");
 document.getElementById("form").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    player1 = document.getElementById("player-1").value.trim();
-    player2 = document.getElementById("player-2").value.trim();
+    player1 = document.getElementById("player1").value.trim();
+    player2 = document.getElementById("player2").value.trim();
 
     if (player1 && player2) {
         document.getElementById("tictactoe").style.display = "grid";
@@ -26,15 +26,15 @@ cells.forEach(cell => {
         cell.textContent = currentPlayer;
 
         if (checkWin()) {
-            const winnerName = currentPlayer === "X" ? player1 : player2;
+            const winnerName = currentPlayer === "x" ? player1 : player2;
             messageDiv.textContent = `${winnerName}, congratulations you won!`;
             gameActive = false;
         } else if (Array.from(cells).every(c => c.textContent)) {
             messageDiv.textContent = "It's a draw!";
             gameActive = false;
         } else {
-            currentPlayer = currentPlayer === "X" ? "O" : "X";
-            const nextPlayerName = currentPlayer === "X" ? player1 : player2;
+            currentPlayer = currentPlayer === "x" ? "o" : "x";
+            const nextPlayerName = currentPlayer === "x" ? player1 : player2;
             messageDiv.textContent = `${nextPlayerName}, you're up`;
         }
     });
