@@ -1,1 +1,42 @@
 /*  your css code here. If applicable */
+body{
+	display:flex;
+	vertical-align:center;
+	align-items:center;
+	flex-direction:column;
+}
+form>button{
+	margin-left:40px;
+	background-color:white;
+	padding:5px 30px;
+	margin-bottom:30px;
+}
+#input{
+	margin-bottom:10px;
+}
+input{
+	border:2px solid black;
+	padding:5px 30px;
+}
+#tictactoe{
+	display:grid;
+	background-color:#FFC0CB;
+	border:1px solid black;
+	height:400px;
+	width:400px;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows:1fr 1fr 1fr;;
+}
+.cell{
+	border:1px solid black;
+	border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+}
+.message {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
