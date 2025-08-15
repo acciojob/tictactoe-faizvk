@@ -27,7 +27,7 @@ cells.forEach(cell => {
 
         if (checkWin()) {
             const winnerName = currentPlayer === "x" ? player1 : player2;
-            messageDiv.textContent = `${winnerName}, congratulations you won!`;
+            messageDiv.textContent = `${winnerName} congratulations you won!`;
             gameActive = false;
         } else if (Array.from(cells).every(c => c.textContent)) {
             messageDiv.textContent = "It's a draw!";
